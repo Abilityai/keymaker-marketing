@@ -21,6 +21,12 @@ avatar_prompt: >
   A marketing lead at a whiteboard of a content calendar and a channel chart, marker in hand,
   bright studio light, photographic.
 
+use_cases:
+  - "What are we publishing in the next two weeks?"
+  - "Write the weekly report"
+  - "Add a LinkedIn post about client onboarding for the pilot offer"
+  - "Which leads should go to Sales?"
+
 capabilities:
   - content-planning
   - lead-tracking
