@@ -1,0 +1,55 @@
+# Keymaker Marketing - a Trinity agent template
+# Part of the Keymaker agency starter set (keymaker.agency). Public, zero-credential by default.
+name: keymaker-marketing
+display_name: "Keymaker Marketing"
+description: |
+  The marketing desk of Keymaker, an agency that sets up automation on Trinity for other
+  companies. Plans the content, counts the leads by channel, and writes the weekly report the
+  agency runs on. Hands qualified inbound to Keymaker Sales as a deal, never as a guess.
+
+  Runs out of the box on files (marketing/leads.yaml, marketing/content_plan.md). Email, ads
+  and analytics connections are added one credential at a time.
+tagline: "Content planned, leads counted, one report a week."
+version: "0.1.0"
+author: "Keymaker (keymaker.agency)"
+
+resources:
+  cpu: "1"
+  memory: "2g"
+
+avatar_prompt: >
+  A marketing lead at a whiteboard of a content calendar and a channel chart, marker in hand,
+  bright studio light, photographic.
+
+capabilities:
+  - content-planning
+  - lead-tracking
+  - weekly-reporting
+
+commands:
+  - name: content-plan
+    description: The next two weeks of content, one item per slot, each tied to an offer
+    usage: /content-plan [--weeks 2]
+  - name: weekly-report
+    description: Leads by channel, content shipped, what to change next week
+    usage: /weekly-report [--week YYYY-Www]
+
+folders:
+  expose: true     # reports/ readable by the agency's other agents
+  consume: true    # reads what sales and delivery expose
+
+credentials: {}
+
+metrics:
+  - name: leads_week
+    type: counter
+    description: New leads this week, all channels
+  - name: qualified_leads_week
+    type: counter
+    description: Leads handed to Sales this week
+  - name: content_shipped_week
+    type: counter
+    description: Content items published this week
+  - name: top_channel_share
+    type: gauge
+    description: Share of this week's leads from the best channel (0-100)

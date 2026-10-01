@@ -1,0 +1,26 @@
+# Sample leads for a fictional agency - edit freely.
+leads:
+  - date: "2026-09-23"
+    company: Bluefin Dental Group
+    person: "Priya Nair"
+    channel: website
+    asked: "Can you automate our recall calls?"
+    handed: true
+  - date: "2026-09-25"
+    company: Granite Peak Accounting
+    person: "Owen Hale"
+    channel: linkedin
+    asked: "Saw the post on client onboarding agents"
+    handed: false
+  - date: "2026-09-29"
+    company: Brightline Studio
+    person: "Mei Tanaka"
+    channel: referral
+    asked: "Referred by Harbor & Vale"
+    handed: true
+  - date: "2026-09-30"
+    company: unknown
+    person: "newsletter reply"
+    channel: newsletter
+    asked: "Asked for the audit price"
+    handed: false
